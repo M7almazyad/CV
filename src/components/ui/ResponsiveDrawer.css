@@ -1,0 +1,28 @@
+body{
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+#about{
+     background-color: #f8f9fa
+
+ }
+
+#home{
+    /*background-image: url("../img/header-bg.jpg");*/
+}
+
+.MuiListItemIcon-root{
+    min-width: 35px !important;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#experience{
+    background-color: #f8f9fa
+}

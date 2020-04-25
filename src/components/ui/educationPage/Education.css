@@ -1,0 +1,230 @@
+.educationSection{
+    max-width: 100rem;
+    min-height: 100vh;
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+
+}
+
+.educationLine{
+    list-style: none;
+}
+
+.text-exp{
+    padding-bottom: 20px;
+    width: 17vw;
+    height: 20vh;
+    float: left;
+}
+
+
+.MuiButton-outlinedSecondar{
+    color: green !important;
+}
+
+
+.expLine {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.expLine:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    content: '';
+    background-color: #e9ecef;
+}
+
+.expLine > li {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 50px;
+}
+
+.expLine > li:after, .expLine > li:before {
+    display: table;
+    content: ' ';
+}
+
+.expLine > li:after {
+    clear: both;
+}
+
+.expLine > li .expLine-panel {
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 0 20px 0 80px;
+    text-align: left;
+}
+
+.expLine > li .expLine-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.expLine > li .expLine-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.expLine > li .expLine-image {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    text-align: center;
+    color: white;
+    border: 4px solid #e9ecef;
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+
+.expLine > li .expLine-image h4 {
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 12px;
+}
+
+.expLine > li.expLine-inverted > .expLine-panel {
+    float: right;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.expLine > li.expLine-inverted > .expLine-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.expLine > li.expLine-inverted > .expLine-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.expLine > li:last-child {
+    margin-bottom: 0;
+}
+
+.expLine > li:last-child:after {
+   clear: none;
+}
+.expLine .expLine-heading h4 {
+    margin-top: 0;
+    color: inherit;
+}
+
+.expLine .expLine-heading h4.subheading {
+    text-transform: none;
+}
+
+.expLine .expLine-body > ul,
+.expLine .expLine-body > p {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .expLine:before {
+        left: 50%;
+    }
+    .expLine > li {
+        min-height: 100px;
+        margin-bottom: 100px;
+    }
+    .expLine > li .expLine-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+    .expLine > li .expLine-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+    .expLine > li .expLine-image h4 {
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 16px;
+    }
+    .expLine > li.expLine-inverted > .expLine-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .expLine > li {
+        min-height: 150px;
+    }
+    .expLine > li .expLine-panel {
+        padding: 0 20px 20px;
+    }
+    .expLine > li .expLine-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+    }
+    .expLine > li .expLine-image h4 {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 30px;
+    }
+    .expLine > li.expLine-inverted > .expLine-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .expLine > li {
+        min-height: 170px;
+    }
+    .expLine > li .expLine-panel {
+        padding: 0 20px 20px 20px;
+    }
+    .expLine > li .expLine-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
+    }
+    .expLine > li .expLine-image h4 {
+        margin-top: 40px;
+    }
+    .expLine > li.expLine-inverted > .expLine-panel {
+        padding: 0 100px 20px 20px;
+    }
+}
+
+.team-member {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 225px;
+    height: 225px;
+    border: 7px solid rgba(0, 0, 0, 0.1);
+}
+
+.team-member h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+}

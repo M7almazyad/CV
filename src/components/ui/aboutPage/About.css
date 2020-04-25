@@ -1,0 +1,28 @@
+.aboutSection{
+    max-width: 100vw;
+    min-height: 100vh;
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+
+}
+#rowAbout {
+    align-items: center;
+    min-height: 85vh ;
+}
+.aboutPaper{
+    min-height: 25vh;
+
+}
+.divider{
+    box-shadow: 0px 3px 3px -2px rgb(204, 220, 241),
+    0px 3px 4px 0px rgb(207, 223, 242),
+    0px 1px 8px 0px rgb(206, 222, 242)!important;
+}
+.myPic{
+
+    height: 156px;
+    width: 156px;
+    border: 7px solid rgba(0,0,0,.1);
+    border-radius: 50%!important;
+
+}
