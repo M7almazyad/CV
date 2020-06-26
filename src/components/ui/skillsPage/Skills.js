@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import "./Skills.css";
-import reactLogo from "../../img/react2.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faReact}from '@fortawesome/free-brands-svg-icons'
 import {faHtml5}from '@fortawesome/free-brands-svg-icons'
@@ -13,7 +12,6 @@ import fluuterLogoH from "../../img/flutter.png";
 import fluuterLogo from "../../img/flutter-seeklogo.png";
 import SpringLogoH from "../../img/springH.png";
 import SpringLogo from "../../img/spring.png"
-import Projects from "./projects";
 import Grow from "@material-ui/core/Grow";
 import {makeStyles} from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -21,12 +19,10 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import SpringLogoHp from "../../img/springH.png";
 import EmcLogo from "../../img/EMC.png";
 import Crawler from "../../img/Crawler.png";
 import Todo from "../../img/Todo.png";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
+
 
 
 
@@ -67,13 +63,18 @@ export default function Skills() {
         setActive(num);
     }
     let [checked,setChecked]=useState(false);
-    const handleChecked = () => {
-        setChecked(true);
-    }
+    useEffect(() => {
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY>2800){
+                setChecked(true);
+            }
+        })
+    })
+
     const tooltipS=(
-            <div  >
+            <div >
                 <div  className="mySkills">
-                        <div className=" d-md-inline-block  d-sm-block">
+                        <div  className=" d-md-inline-block  d-sm-block">
                             <Grow in={checked}>
                             <h1 className="mb-3">Skills: </h1>
                             </Grow>
@@ -152,14 +153,11 @@ export default function Skills() {
             <Grow in={checked}>
                 <div>
                 <h1 className="mb-3 d-inline">Projects : </h1>
-                    <Button className="mb-2 d-inline " variant="outlined" color="primary" href="https://github.com/M7almazyad?tab=repositories"  target="_blank" >
-                        Show more
-                    </Button>
                 </div>
              </Grow>
             <Grow in={checked} timeout={1000}>
             <Card className={`${classes.root} myCard  `}>
-                <CardActionArea className={` myCard  `}>
+                <CardActionArea className={` myCard  `} href="https://play.google.com/store/apps/details?id=com.amaoeas.emc" target="_blank">
                     <CardMedia
                         className={classes.EmcMedia}
                         image={EmcLogo}
@@ -168,9 +166,9 @@ export default function Skills() {
                         <Typography gutterBottom variant="h5" component="h2">
                             EMC
                         </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                            across all continents except Antarctica
+                        <Typography variant="body2" color="textSecondary" component="p" className="text-justify">
+                            EMC for emergency services, its cross-platform application (Flutter)
+                            lets the user requests an Ambulance faster, saving the time of describing the location or finding a hospital!
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -178,8 +176,8 @@ export default function Skills() {
             </Grow>
 
             <Grow in={checked} timeout={1200}>
-                <Card className={`${classes.root} myCard`}>
-                    <CardActionArea  className={` myCard  `}>
+                <Card className={`${classes.root} myCard`} >
+                    <CardActionArea  className={` myCard  `} href="https://m7almazyad.github.io/Todo2/" target="_blank">
                         <CardMedia
                             className={classes.TodoMedia}
                             image={Todo}
@@ -198,7 +196,7 @@ export default function Skills() {
 
             <Grow in={checked} timeout={1100}>
             <Card className={`${classes.root} myCard`}>
-                <CardActionArea  className={` myCard  `}>
+                <CardActionArea  className={` myCard  `} href="https://github.com/M7almazyad/Crawler" target="_blank">
                     <CardMedia
                         className={classes.CrawlerMedia}
                         image={Crawler}
@@ -208,8 +206,7 @@ export default function Skills() {
                             Crawler
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            This small project mange students, you can add student, edit, and delete
-                            I use React and hibernate.
+                            develop a web crawler and use it to collect a sample pages from the web.
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -221,7 +218,7 @@ export default function Skills() {
     )
 
     return(
-        <div onTouchStart={()=>handleChecked()} onMouseEnter={()=>handleChecked()} className="skillsSection ">
+        <div className="skillsSection ">
             <div className="container-fluid ">
                 <div className="row d-block">
                 {tooltipS}

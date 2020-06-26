@@ -1,19 +1,26 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import KsuPic from "../../img/ksu.png";
 import CoEIAPic from "../../img/CoEIA.png"
 import JahezPic from "../../img/Jahez.png"
 import "./Education.css"
-import Button from "@material-ui/core/Button";
-import Grow from "@material-ui/core/Grow";
 import Slide from "@material-ui/core/Slide";
+import AlertDialog from "./AlertDialog";
+import Cry from "./certificate/Cry.png"
+import Ksu from "./certificate/Ksu.png"
+import sql from "./certificate/sql-1.png"
 
 export default function Education() {
     let [checked,setChecked]=useState(false);
-    const handleChecked = () => {
-        setChecked(true);
-    }
+    useEffect(() => {
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY>1430){
+                setChecked(true);
+            }
+        })
+    })
+
     return(
-       <div  onTouchStart={()=>handleChecked()} onMouseEnter={()=>handleChecked()} className="educationSection  container-fluid">
+       <div  className="educationSection  container-fluid">
             <div className="row">
                 <div className="col-lg-12">
                     <h1 className="text-center pb-5"> Education : </h1>
@@ -37,9 +44,7 @@ export default function Education() {
                                             - Integrity ( MD5 , SHA-1 ).
                                         </p>
                                     </div>
-                                    <Button className="mt-2" variant="outlined" color="primary">
-                                        Show Certificate
-                                    </Button>
+                                   <AlertDialog imgSrc={Cry} />
                                 </div>
                             </Slide>
                         </li>
@@ -61,9 +66,7 @@ export default function Education() {
                                     - Database Programming with PL/SQL
                                     </p>
                                 </div>
-                                <Button className="mt-2" variant="outlined" color="primary">
-                                    Show Certificate
-                                </Button>
+                                <AlertDialog imgSrc={sql} />
                             </div>
                             </Slide>
                         </li>
@@ -81,9 +84,7 @@ export default function Education() {
                                     <h4 className="subheading">King Saud University - Computer Science</h4>
                                     <h5> Bachelor's Degree - GPA (3.47 from 5)</h5>
                                 </div>
-                                <Button className="mt-2" variant="outlined" color="primary">
-                                    Show Certificate
-                                </Button>
+                                <AlertDialog imgSrc={Ksu} />
                             </div>
                             </Slide>
                         </li>
@@ -92,53 +93,8 @@ export default function Education() {
                 </div>
             </div>
 
-
-            {/*<div className="row">*/}
-            {/*    <div className="offset-md-3"/>*/}
-            {/*    <div className=" col-6">*/}
-            {/*        <div className="text-center img-exp d-inline">*/}
-            {/*            <img src={myPic} className="myPic  img-thumbnail"/>*/}
-            {/*        </div>*/}
-            {/*                <div className="text-exp">*/}
-            {/*                    <h2>Hi</h2>*/}
-            {/*                    <p>*/}
-            {/*                        im mohmammed almazyadim mohmammed almazyadim mohmammed*/}
-            {/*                        almazyadim mohmammed almazyadim mohmammed almazyadim mohmammed almazyad*/}
-            {/*                    </p>*/}
-            {/*                </div>*/}
-            {/*     </div>*/}
-            {/*</div>*/}
-            {/*<div className="row">*/}
-            {/*    <div className="offset-md-3"/>*/}
-            {/*    <div className=" col-6">*/}
-            {/*        <div className="text-center img-exp d-inline">*/}
-            {/*            <img src={myPic} className="myPic  img-thumbnail"/>*/}
-            {/*        </div>*/}
-            {/*        <div className="text-exp float-right">*/}
-            {/*            <h2>Hi</h2>*/}
-            {/*            <p>*/}
-            {/*                im mohmammed almazyadim mohmammed almazyadim mohmammed*/}
-            {/*                almazyadim mohmammed almazyadim mohmammed almazyadim mohmammed almazyad*/}
-            {/*            </p>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
         </div>
 
     );
 }
 
-{/*<ul className="educationLine">*/}
-{/*    <li className="pb-5">*/}
-{/*        <div className="img-exp">*/}
-{/*            <img src={myPic} className="myPic  img-thumbnail"/>*/}
-{/*        </div>*/}
-{/*        <div className="text-exp">*/}
-{/*            <h2>Hi</h2>*/}
-{/*            <p>*/}
-{/*                im mohmammed almazyadim mohmammed almazyadim mohmammed*/}
-{/*                almazyadim mohmammed almazyadim mohmammed almazyadim mohmammed almazyad*/}
-{/*            </p>*/}
-{/*        </div>*/}
-{/*    </li>*/}
-{/*</ul>*/}

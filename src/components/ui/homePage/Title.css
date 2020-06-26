@@ -16,7 +16,7 @@
     height: 30vh;
     left: 37%;
     position: absolute;
-    top: 45%;
+    top: 33%;
     transform: translate(-50%, -50%);
     width: 30vw;
 
@@ -87,7 +87,7 @@ body{
         width: 78vw;
     }
     .myTitle {
-        min-height: 40vh;
+        min-height: 25vh;
     }
     .animated-title > div div {
         font-size: 6vmin;

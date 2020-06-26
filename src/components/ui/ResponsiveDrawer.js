@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
@@ -21,8 +20,6 @@ import Experience from "./experiencePage/Experience";
 import WorkIcon from '@material-ui/icons/Work';
 import Skills from "./skillsPage/Skills";
 import FormatListNumberedIcon from '@material-ui/icons/FormatListNumbered';
-import Avatar from "@material-ui/core/Avatar";
-import  myPicF from '../img/myPic2.png'
 
 
 const drawerWidth = 150;
@@ -90,16 +87,16 @@ function ResponsiveDrawer(props) {
     const drawer = (
         <div className={classes.toolbar}>
             <List >
-                <ListItem item   key={1} >
-            <Avatar alt="Remy Sharp" src={myPicF} className={`${classes.large} rounded-circle img-fluid`} />
+                <ListItem    key={1} >
+            {/*<Avatar alt="Remy Sharp" src={myPicF} className={`${classes.large} rounded-circle img-fluid`} />*/}
             </ListItem>
             <Divider />
 
                 <a href="#home"  className="active1" onClick={()=>اhandleColor(1)}  id={1} >
                     <ListItem button onClick={()=>setMobileOpen(false)}  key={1} >
-                        <ListItemIcon style={{color:`${active==1?"#007bffd4":"rgba(0, 0, 0, 0.54)"}`}}><HomeIcon /> </ListItemIcon>
-                        <ListItemText style={{color:`${active==1?"#007bffd4":"black"}`}} primary={"Home"} />
-                    </ListItem>
+                        <ListItemIcon style={{color:`${active===1?"#007bffd4":"rgba(0, 0, 0, 0.54)"}`}}><HomeIcon /></ListItemIcon>
+                        <ListItemText style={{color:`${active===1?"#007bffd4":"black"}`}} primary={"Home"} />
+                     </ListItem>
                 </a>
                 <Divider />
                 <Divider />
@@ -107,29 +104,29 @@ function ResponsiveDrawer(props) {
 
                 <a href="#about" onClick={()=>اhandleColor(2)}>
                 <ListItem button onClick={()=>setMobileOpen(false)} key={2} >
-                    <ListItemIcon style={{color:`${active==2?"#007bffd4":"rgba(0, 0, 0, 0.54)"}`}} > <PersonIcon /> </ListItemIcon>
-                    <ListItemText style={{color:`${active==2?"#007bffd4":"black"}`}}  primary={"About"} />
+                    <ListItemIcon style={{color:`${active===2?"#007bffd4":"rgba(0, 0, 0, 0.54)"}`}} ><PersonIcon /></ListItemIcon>
+                    <ListItemText style={{color:`${active===2?"#007bffd4":"black"}`}}  primary={"About"} />
                 </ListItem>
                 </a>
                 <Divider />
                 <a href="#education" onClick={()=>اhandleColor(3)}>
                     <ListItem button onClick={()=>setMobileOpen(false)}  key={3}>
-                        <ListItemIcon style={{color:`${active==3?"#007bffd4":"rgba(0, 0, 0, 0.54)"}`}} > <SchoolIcon /> </ListItemIcon>
-                        <ListItemText style={{color:`${active==3?"#007bffd4":"black"}`}}  primary={"Education"} />
+                        <ListItemIcon style={{color:`${active===3?"#007bffd4":"rgba(0, 0, 0, 0.54)"}`}} ><SchoolIcon /></ListItemIcon>
+                        <ListItemText style={{color:`${active===3?"#007bffd4":"black"}`}}  primary={"Education"} />
                     </ListItem>
                 </a>
                 <Divider />
                 <a href="#experience" onClick={()=>اhandleColor(4)}>
                     <ListItem button  onClick={()=>setMobileOpen(false)} key={4}>
-                        <ListItemIcon style={{color:`${active==4?"#007bffd4":"rgba(0, 0, 0, 0.54)"}`}} > <WorkIcon /> </ListItemIcon>
-                        <ListItemText style={{color:`${active==4?"#007bffd4":"black"}`}} primary={"Experience"} />
+                        <ListItemIcon style={{color:`${active===4?"#007bffd4":"rgba(0, 0, 0, 0.54)"}`}} ><WorkIcon /></ListItemIcon>
+                        <ListItemText style={{color:`${active===4?"#007bffd4":"black"}`}} primary={"Experience"} />
                     </ListItem>
                 </a>
                 <Divider />
                 <a href="#skills" onClick={()=>اhandleColor(5)}>
                     <ListItem button onClick={()=>setMobileOpen(false)} key={5}>
-                        <ListItemIcon style={{color:`${active==5?"#007bffd4":"rgba(0, 0, 0, 0.54)"}`}} > <FormatListNumberedIcon /> </ListItemIcon>
-                        <ListItemText style={{color:`${active==5?"#007bffd4":"black"}`}} primary={"Skills"} />
+                        <ListItemIcon style={{color:`${active===5?"#007bffd4":"rgba(0, 0, 0, 0.54)"}`}} ><FormatListNumberedIcon /></ListItemIcon>
+                        <ListItemText style={{color:`${active===5?"#007bffd4":"black"}`}} primary={"Skills"} />
                     </ListItem>
                 </a>
                 <Divider />
@@ -181,7 +178,7 @@ function ResponsiveDrawer(props) {
                     </Drawer>
                 </Hidden>
             </nav>
-            <main className={`${classes.content} `}>
+            <main  className={`${classes.content} `}>
                 <section id="home" className="container-fluid " onMouseEnter={()=>اhandleColor(1)}>
                     <Home/>
                 </section>

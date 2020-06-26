@@ -14,3 +14,15 @@
 /*      width: 86vw;*/
 /*  }*/
 /*}*/
+.webPic{
+    border-radius: 1%;
+    width:38vw;
+    margin-bottom: 200px;
+    margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+    .webPic{
+        margin-bottom: 80px;
+    }
+}

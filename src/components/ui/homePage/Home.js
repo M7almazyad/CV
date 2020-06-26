@@ -1,22 +1,22 @@
 import React from 'react';
 import Title from "./Title";
-import WepPic from "../../img/webPic.png";
+import WepPic from "../../img/myPic6.png";
 import "./Home.css"
-import Grow from "@material-ui/core/Grow";
+import Slide from "@material-ui/core/Slide";
 export default function Home() {
 
     return(
       <div className="">
             <div className="section d-none d-md-block lgg">
-                <div className="row " id="rowHome">
+                <div className="row "  id="rowHome">
                     <div className="col-md-6  pt-5">
                         <Title/>
                     </div>
-                    <Grow in={true} timeout={1500}>
+                    <Slide direction="left" in={true} timeout={1000} mountOnEnter unmountOnExit>
                     <div className="col-md-6  lgg" >
-                        <img src={WepPic} style={{width:"40vw", marginBottom:200}} className=" pr-2 webPic " />
+                        <img src={WepPic}  className="webPic ml-2  " alt="" />
                     </div>
-                    </Grow>
+                    </Slide>
                 </div>
             </div>
           <div className="section d-md-none">
@@ -25,7 +25,7 @@ export default function Home() {
                       <Title/>
                   </div>
                   <div className="col-sm-12 webPic" >
-                      <img src={WepPic} style={{width:"86vw", marginBottom:200}} />
+                      <img src={WepPic} style={{width:"86vw", marginBottom:200}} alt="" />
                   </div>
               </div>
 

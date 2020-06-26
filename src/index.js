@@ -1,15 +1,15 @@
 import React from 'react';
-import ReactDOM, {render} from 'react-dom';
+import  {render} from 'react-dom';
 import App from './components/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {createMuiTheme, MuiThemeProvider} from "@material-ui/core";
-import {green, red} from "@material-ui/core/colors";
 import blue from "@material-ui/core/colors/blue";
 const theme=createMuiTheme({
     palette:{
         primary:blue
     }
 });
+
 render(
     <MuiThemeProvider theme={theme}>
         <App/>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Experience.css"
 import AmalessPic from "../../img/amaless.png";
 import LevoPic from "../../img/levo.png";
@@ -7,11 +7,15 @@ import Slide from "@material-ui/core/Slide";
 
 export default function Experience() {
     let [checked,setChecked]=useState(false);
-    const handleChecked = () => {
-        setChecked(true);
-    }
+    useEffect(() => {
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY>2335){
+                setChecked(true);
+            }
+        })
+    })
     return(
-        <div onTouchStart={()=>handleChecked()} onMouseEnter={()=>handleChecked()} className="experienceSection  container-fluid">
+        <div  className="experienceSection  container-fluid">
             <div className="row">
                 <div className="col-lg-12">
                     <h1 className="text-center pb-5"> Experience : </h1>

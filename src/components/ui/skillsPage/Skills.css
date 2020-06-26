@@ -42,3 +42,6 @@ a{
 .skill{
     margin: 16px;
 }
+.MuiTypography-body2 {
+    font-size: 0.775rem !important;
+}
